@@ -105,8 +105,8 @@ environments:
     development:
         dataSource:
             url: jdbc:postgresql://localhost:5432/blockdock
-                                  username: blockdock
-                                  password: blockdock
+            username: blockdock
+            password: blockdock
     test:
         dataSource:
             url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
