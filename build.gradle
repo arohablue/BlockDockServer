@@ -7,6 +7,7 @@ buildscript {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "org.grails.plugins:hibernate5:${gormVersion-".RELEASE"}"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
+        classpath "org.grails.plugins:database-migration:3.0.3"
     }
 }
 
@@ -68,4 +69,12 @@ bootRun {
 assets {
     minifyJs = true
     minifyCss = true
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'grails-app/migrations'
+        }
+    }
 }
